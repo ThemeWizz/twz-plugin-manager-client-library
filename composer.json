@@ -1,5 +1,5 @@
 {
-    "name": "themewizz/twz-plugin-manager-library",
+    "name": "themewizz/twz-plugin-manager-client-library",
     "description": "Plugin Manager Library",
     "type": "library",
     "license": "MIT",
