@@ -1,0 +1,18 @@
+{
+    "name": "themewizz/twz-plugin-manager-library",
+    "description": "Plugin Manager Library",
+    "type": "library",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "themewizz\\twz_plugin_manager\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Sergey Tulyaganov",
+            "email": "st@sersart.com"
+        }
+    ],
+    "require": {}
+}
