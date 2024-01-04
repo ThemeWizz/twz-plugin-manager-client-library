@@ -1,4 +1,4 @@
-var cnkt_installer = cnkt_installer || {};
+var twz_installer = twz_installer || {};
 
 jQuery(document).ready(function ($) {
 	("use strict");
@@ -11,27 +11,27 @@ jQuery(document).ready(function ($) {
 	 * @param {Element} el    Button element.
 	 * @param {string} plugin The plugin slug.
 	 */
-	cnkt_installer.install_plugin = function (el, plugin) {
+	twz_installer.install_plugin = function (el, plugin) {
 		// Confirm activation.
-		var r = confirm(cnkt_installer_localize.install_now);
+		var r = confirm(twz_installer_localize.install_now);
 		if (r) {
 			is_loading = true;
 			el.addClass("installing");
 
 			$.ajax({
 				type: "POST",
-				url: cnkt_installer_localize.ajax_url,
+				url: twz_installer_localize.ajax_url,
 				data: {
 					action: "cnkt_plugin_installer",
 					plugin: plugin,
-					nonce: cnkt_installer_localize.admin_nonce,
+					nonce: twz_installer_localize.admin_nonce,
 					dataType: "json",
 				},
 				success: function (data) {
 					if (data) {
 						if (data.status === "success") {
 							el.attr("class", "activate btn btn-primary btn-sm");
-							el.html(cnkt_installer_localize.activate_btn);
+							el.html(twz_installer_localize.activate_btn);
 						} else {
 							el.removeClass("installing");
 						}
@@ -55,21 +55,21 @@ jQuery(document).ready(function ($) {
 	 * @param {Element} el    Button element.
 	 * @param {string} plugin The plugin slug.
 	 */
-	cnkt_installer.activate_plugin = function (el, plugin) {
+	twz_installer.activate_plugin = function (el, plugin) {
 		$.ajax({
 			type: "POST",
-			url: cnkt_installer_localize.ajax_url,
+			url: twz_installer_localize.ajax_url,
 			data: {
 				action: "cnkt_plugin_activation",
 				plugin: plugin,
-				nonce: cnkt_installer_localize.admin_nonce,
+				nonce: twz_installer_localize.admin_nonce,
 				dataType: "json",
 			},
 			success: function (data) {
 				if (data) {
 					if (data.status === "success") {
 						el.attr("class", "installed button disabled");
-						el.html(cnkt_installer_localize.installed_btn);
+						el.html(twz_installer_localize.installed_btn);
 					}
 				}
 				is_loading = false;
@@ -97,12 +97,12 @@ jQuery(document).ready(function ($) {
 
 			// Installation
 			if (el.hasClass("install")) {
-				cnkt_installer.install_plugin(el, plugin);
+				twz_installer.install_plugin(el, plugin);
 			}
 
 			// Activation
 			if (el.hasClass("activate")) {
-				cnkt_installer.activate_plugin(el, plugin);
+				twz_installer.activate_plugin(el, plugin);
 			}
 		}
 	});

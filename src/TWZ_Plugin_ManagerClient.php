@@ -45,7 +45,7 @@ class TWZ_Plugin_ManagerClient
 			'plugin-installer',
 			'cnkt_installer_localize',
 			[
-				'ajax_url'      => admin_url('admin-ajax.php'),
+				'ajax_url'      => $this->server_url . '/wp-admin/admin-ajax.php',
 				'admin_nonce'   => wp_create_nonce('twz-plugin-manager-client'),
 				'install_now'   => __('Are you sure you want to install this plugin?', 'twz-plugin-manager-client'),
 				'install_btn'   => __('Install Now', 'twz-plugin-manager-client'),
@@ -113,12 +113,12 @@ class TWZ_Plugin_ManagerClient
 	private function plugin_categories_list()
 	{
 		$cotegories = array();
-		$cotegories[] = array('id' => 'all', 'name'  => __('All'));
-		$cotegories[] = array('id' => 'protection', 'name'  => __('Protection'));
-		$cotegories[] = array('id' => 'security', 'name'  => __('Security'));
-		$cotegories[] = array('id' => 'payment', 'name'  => __('Payment'));
-		$cotegories[] = array('id' => 'ecommerce', 'name'  => __('Ecommerce'));
-		$cotegories[] = array('id' => 'debug', 'name'  => __('Debug'));
+		$cotegories[] = array('id' => 'all', 'name'  => __('All', 'twz-plugin-manager-client'));
+		$cotegories[] = array('id' => 'protection', 'name'  => __('Protection', 'twz-plugin-manager-client'));
+		$cotegories[] = array('id' => 'security', 'name'  => __('Security', 'twz-plugin-manager-client'));
+		$cotegories[] = array('id' => 'payment', 'name'  => __('Payment', 'twz-plugin-manager-client'));
+		$cotegories[] = array('id' => 'ecommerce', 'name'  => __('Ecommerce', 'twz-plugin-manager-client'));
+		$cotegories[] = array('id' => 'debug', 'name'  => __('Debug', 'twz-plugin-manager-client'));
 		return $cotegories;
 	}
 

@@ -35,7 +35,7 @@
                 <div class="p-2">
                     <h2><?php echo wp_kses_post($plugin['twz_plugin_title']); ?></h2>
                     <p><?php echo wp_kses_post($plugin['twz_plugin_description']); ?></p>
-                    <p class="plugin-author"><?php esc_attr_e('By', 'cnkt-installer'); ?> <?php echo wp_kses_post($plugin['twz_plugin_author']); ?></p>
+                    <p class="plugin-author"><?php esc_attr_e('By', 'twz-plugin-manager-client'); ?> <?php echo wp_kses_post($plugin['twz_plugin_author']); ?></p>
                 </div>
             </div>
             <div class="d-flex justify-content-center" style="height: 35px; color: green;">
@@ -54,7 +54,7 @@
                 </li>
                 <li>
                     <a href="<?php echo esc_attr($plugin['twz_plugin_help_url']); ?>/" target="_blank">
-                        <?php esc_attr_e('More Details', 'cnkt-installer'); ?>
+                        <?php esc_attr_e('More Details', 'twz-plugin-manager-client'); ?>
                     </a>
                 </li>
             </ul>
