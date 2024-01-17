@@ -10,8 +10,10 @@
     },
     "authors": [
         {
-            "name": "Sergey Tulyaganov",
-            "email": "st@sersart.com"
+            "name": "Steven Wagner",
+            "email": "stevenw@themewizz.com",
+            "homepage": "https://www.themewizz.com/",
+            "role": "Developer"
         }
     ],
     "require": {}
