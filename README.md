@@ -7,7 +7,7 @@ This class can be used in a PHP application to contact a Themewizz based Plugin 
 - Include TWZ_Plugin_Manager_Client class in your PHP application
 ```php
 		$server_url = 'Server URL';
-		$plugin_slug = 'your_plugin_slugt';
+		$plugin_slug = 'your_plugin_slug';
 		$pluginManager = new TWZ_Plugin_Manager_Client($server_url, $plugin_slug);
 		echo $pluginManager->show_products();
 ```
