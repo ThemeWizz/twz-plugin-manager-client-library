@@ -1,6 +1,6 @@
 {
     "name": "themewizz/twz-plugin-manager-client-library",
-    "description": "Plugin Manager Library",
+    "description": "Plugin Manager Client Library",
     "type": "library",
     "license": "MIT",
     "autoload": {
@@ -10,8 +10,8 @@
     },
     "authors": [
         {
-            "name": "Steven Wagner",
-            "email": "stevenw@themewizz.com",
+            "name": "Themewizz Team",
+            "email": "support@themewizz.com",
             "homepage": "https://www.themewizz.com/",
             "role": "Developer"
         }

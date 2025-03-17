@@ -1,6 +1,6 @@
 <?php
 
-namespace themewizz\twz_plugin_manager;
+namespace Twz_Blacklist\WP\Dependencies\themewizz\twz_plugin_manager;
 
 use InvalidArgumentException;
 
@@ -10,7 +10,9 @@ class TWZ_Plugin_Manager_Client
 	private $plugin_slug = '';
 
 	private $show_type = 'our_products';
+	protected $data = null;
 	protected $plugins = null;
+	protected $tags = null;
 	protected $categories = 'all';
 
 	public function __construct($server_url, $plugin_slug)
@@ -42,7 +44,9 @@ class TWZ_Plugin_Manager_Client
 
 	protected function init()
 	{
-		wp_enqueue_style('plugin-installer.css',  plugin_dir_url(__FILE__) . 'assets/css/installer.css', array(), '1.0.0');
+		wp_enqueue_style('twz-plugin-lib-manager',  plugin_dir_url(__FILE__) . 'assets/css/twz-manager.css', array(), '1.0.0');
+		wp_enqueue_script('twz-plugin-lib-manager',  plugin_dir_url(__FILE__) . 'assets/js/twz-manager.js', array(), '1.0.0');
+
 		include('views/products-page.php');
 		return true;
 	}
@@ -70,7 +74,9 @@ class TWZ_Plugin_Manager_Client
 		);
 
 		if (!is_wp_error($raw_response) && 200 == $raw_response['response']['code']) {
-			$this->plugins = json_decode($raw_response['body'], true);
+			$this->data = json_decode($raw_response['body'], true);
+			$this->plugins = $this->data['plugins'];
+			$this->tags = $this->data['tags'];
 		} else {
 			if (!empty($raw_response['body'])) {
 				echo $raw_response['body'];
@@ -78,5 +84,9 @@ class TWZ_Plugin_Manager_Client
 			}
 			$this->plugins = array();
 		}
+		$params = [
+			'twz_plugins' => $this->plugins
+		];
+		wp_localize_script('twz-plugin-lib-manager', 'twz_plugin_manager_lib_params', $params);
 	}
 }

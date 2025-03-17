@@ -1,4 +1,4 @@
-.twz-quiz-plugin-installer {
+.twz-plugin-manager {
    box-sizing: border-box;
    display: -webkit-box;
    display: -moz-box;
@@ -15,16 +15,16 @@
    left: -1%;
 }
 
-.twz-quiz-plugin-installer:after {
+.twz-plugin-manager:after {
    content: "";
    flex: auto;
 }
 
-.twz-quiz-plugin-installer * {
+.twz-plugin-manager * {
    box-sizing: border-box;
 }
 
-.twz-quiz-plugin-installer .plugin {
+.twz-plugin-manager .plugin {
    width: 31.333%;
    margin: 0 1% 20px;
    padding: 0;
@@ -40,11 +40,11 @@
    box-shadow: 0 0 10px 1px #ddd;
 }
 
-.twz-quiz-plugin-installer .plugin:hover {
+.twz-plugin-manager .plugin:hover {
    border-color: #cecece;
 }
 
-.twz-quiz-plugin-installer .plugin-wrap {
+.twz-plugin-manager .plugin-wrap {
    padding: 20px 20px 95px 145px;
    min-height: 214px;
    display: block;
@@ -52,18 +52,18 @@
 }
 
 
-.twz-quiz-plugin-installer li a,
-.twz-quiz-plugin-installer .plugin-wrap a {
+.twz-plugin-manager li a,
+.twz-plugin-manager .plugin-wrap a {
    text-decoration: none;
 }
 
-.twz-quiz-plugin-installer .plugin-title {
+.twz-plugin-manager .plugin-title {
    font-size: 16px;
    font-weight: 600;
    padding-bottom: 5px;
 }
 
-.twz-quiz-plugin-installer .plugin-wrap img {
+.twz-plugin-manager .plugin-wrap img {
    display: block;
    position: absolute;
    left: 20px;
@@ -74,8 +74,8 @@
    border-radius: 10%;
 }
 
-.twz-quiz-plugin-installer .plugin-wrap h2,
-.twz-quiz-plugin-installer .plugin-wrap p {
+.twz-plugin-manager .plugin-wrap h2,
+.twz-plugin-manager .plugin-wrap p {
    padding: 0;
    margin: 0;
    font-size: 17px;
@@ -84,7 +84,7 @@
    line-height: 1.4;
 }
 
-.twz-quiz-plugin-installer .plugin-wrap p {
+.twz-plugin-manager .plugin-wrap p {
    padding: 10px 0 0;
    margin: 0;
    font-size: 14px;
@@ -92,48 +92,48 @@
    color: #777;
 }
 
-.twz-quiz-plugin-installer .plugin-wrap p.plugin-author {
+.twz-plugin-manager .plugin-wrap p.plugin-author {
    font-size: 13px;
    padding-top: 20px;
    font-style: italic;
 }
 
-.twz-quiz-plugin-installer .activation-row {
+.twz-plugin-manager .activation-row {
    display: flex;
    justify-content: space-between;
-   padding: 14px;
+   padding: 0px 14px 14px 14px;
    border-radius: 0 0 2px 2px;
    width: 100%;
    overflow: hidden;
 }
 
-.twz-quiz-plugin-installer .activation-row .custom-button {
+.twz-plugin-manager .activation-row .custom-button {
    width: 100%;
-   margin-top: 10px;
+   margin-top: 0px;
    text-align: center;
    border: 1px solid #3171A5;
    border-radius: 5px;
    padding: 8px 0;
 }
 
-.twz-quiz-plugin-installer .activation-row .custom-button .custom-link {
+.twz-plugin-manager .activation-row .custom-button .custom-link {
    text-decoration: none;
 }
 
 @media screen and (max-width: 1170px) {
-   .twz-quiz-plugin-installer .plugin {
+   .twz-plugin-manager .plugin {
       width: 48%;
       margin: 0 1% 15px;
    }
 }
 
 @media screen and (max-width: 960px) {
-   .twz-quiz-plugin-installer .plugin-wrap {
+   .twz-plugin-manager .plugin-wrap {
       padding: 20px 20px 95px 115px;
       min-height: 214px;
    }
 
-   .twz-quiz-plugin-installer .plugin-wrap img {
+   .twz-plugin-manager .plugin-wrap img {
       max-width: 78px;
       max-height: 78px;
       border-radius: 10%;
@@ -141,12 +141,12 @@
 }
 
 @media screen and (max-width: 640px) {
-   .twz-quiz-plugin-installer {
+   .twz-plugin-manager {
       width: 100%;
       position: static;
    }
 
-   .twz-quiz-plugin-installer .plugin {
+   .twz-plugin-manager .plugin {
       width: 100%;
       margin: 0 0 20px;
    }
