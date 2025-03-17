@@ -25,7 +25,7 @@
                                     </div>
                                     <div class="activation-row">
                                         <div class="custom-button">
-                                            <a class="custom-link" href="${plugin.twz_plugin_help_url}" target="_blank">More Details</a>
+                                            <a class="custom-link" href="${plugin.twz_plugin_page_url}" target="_blank">More Details</a>
                                         </div>
                                     </div>
                                 </div>`;
