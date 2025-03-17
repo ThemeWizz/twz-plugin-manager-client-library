@@ -1,6 +1,6 @@
 <?php
 
-namespace Twz_Blacklist\WP\Dependencies\themewizz\twz_plugin_manager;
+namespace themewizz\twz_plugin_manager;
 
 use InvalidArgumentException;
 
