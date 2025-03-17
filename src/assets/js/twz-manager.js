@@ -15,7 +15,7 @@
                     let boast_html = `<div class="plugin">
                                     <div style="display:flex; flex-direction: column;">
                                         <div style="padding: 0.5rem!important; text-align: center;">
-                                            <img style="width: 440px; height: 160px;" src="${plugin.twz_plugin_image}" alt="">
+                                            <img style="width: -webkit-fill-available;; height: -webkit-fill-available;;" src="${plugin.twz_plugin_image}" alt="">
                                         </div>
                                         <div style="padding: 0.5rem!important;">
                                             <div class="plugin-title">${plugin.twz_plugin_title}</div>
