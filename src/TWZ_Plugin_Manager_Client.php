@@ -85,6 +85,7 @@ class TWZ_Plugin_Manager_Client
 			$this->plugins = array();
 		}
 		$params = [
+			'show_type' => $this->show_type,
 			'twz_plugins' => $this->plugins
 		];
 		wp_localize_script('twz-plugin-lib-manager', 'twz_plugin_manager_lib_params', $params);
